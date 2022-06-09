@@ -17,6 +17,7 @@ using DevExpress.ExpressApp.Model.DomainLogics;
 using DevExpress.ExpressApp.Model.NodeGenerators;
 using DevExpress.Xpo;
 using DevExpress.ExpressApp.Xpo;
+using XafTipsAndTricks.Module.ModelUpdaters;
 
 namespace XafTipsAndTricks.Module {
     // For more typical usage scenarios, be sure to check out https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.ModuleBase.
@@ -39,6 +40,13 @@ namespace XafTipsAndTricks.Module {
             AddDomainClassOptionsAttribute(typesInfo);
 
             ExtendedPersistentClass(typesInfo);
+
+        }
+
+        public override void AddGeneratorUpdaters(ModelNodesGeneratorUpdaters updaters)
+        {
+            base.AddGeneratorUpdaters(updaters);
+            updaters.Add(new MyModelStrings());
 
         }
 
