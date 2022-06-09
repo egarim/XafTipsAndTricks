@@ -33,7 +33,8 @@ namespace XafTipsAndTricks.Module.Controllers
         }
         private void GetNodeValue_Execute(object sender, SimpleActionExecuteEventArgs e)
         {
-            var Value=CaptionHelper.GetLocalizedText(MyModelStrings.MyStringsNodeName, MyModelStrings.HelloWorld, "This is the default message if not is not found");
+            //HACK how to use caption helper https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Utils.CaptionHelper
+            var Value =CaptionHelper.GetLocalizedText(MyModelStrings.MyStringsNodeName, MyModelStrings.HelloWorld, "This is the default message if not is not found");
 
 
             MessageOptions options = new MessageOptions();

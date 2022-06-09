@@ -9,6 +9,7 @@ using DevExpress.ExpressApp.Model.NodeGenerators;
 
 namespace XafTipsAndTricks.Module.ModelUpdaters
 {
+    //HACK https://docs.devexpress.com/eXpressAppFramework/DevExpress.ExpressApp.Model.ModelNodesGeneratorUpdater-1
     public class MyModelStrings : ModelNodesGeneratorUpdater<ModelLocalizationNodesGenerator>
     {
         public const string HelloWorld = "Hello Xaf World";
